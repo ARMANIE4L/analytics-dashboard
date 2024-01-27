@@ -1,0 +1,48 @@
+.amountAndPercentGained {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+
+
+.rangeContainer {
+    width: 100%;
+    height: 10px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+  
+.rangeFill {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+  
+.range {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+  
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+  
+.range::-moz-range-thumb {
+    width: 0;
+    height: 0;
+}
+  
+.range::-ms-thumb {
+    width: 0;
+    height: 0;
+}

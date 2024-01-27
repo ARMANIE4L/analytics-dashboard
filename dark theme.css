@@ -1,0 +1,121 @@
+.dark-theme {
+    background-color: #192734;
+}
+
+.dark-theme header {
+    background-color: #192734;
+    color: white;
+}
+
+.dark-theme #headerContainer {
+    border-width: 0px;
+}
+
+.dark-theme .navbar-brand {
+    color: white;
+}
+
+.dark-theme #headerDateContainer {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.dark-theme #currentDate {
+    color: black;
+}
+
+.dark-theme #sideBar {
+    background-color: #192734;
+    border-width: 0px;
+}
+
+.dark-theme #sunAndMoon {
+    background-color: #748ba5;
+}
+
+.dark-theme .moon-toggle-button {
+    border: solid 1px rgb(7, 216, 188);
+    background-color: rgb(7, 216, 188);
+    border-radius: 70px;  
+    height: 30px;
+    width: 30px;
+    padding: 3px 2px;
+    margin-left: 0px;
+    transform: rotate(-50deg);
+}
+
+.sun-toggle-button {
+    border: solid 1px rgb(7, 216, 188);
+    background-color: rgb(7, 216, 188);
+    border-radius: 70px;  
+    height: 30px;
+    width: 30px;
+    padding: 3px 2px;
+    margin-left: 0px;
+}
+
+.gray-moon-toggle-button {
+    transform: rotate(-50deg);
+}
+
+.dark-theme #chart-container {
+    background-color: #748ba5;
+    color: white;
+}
+
+.dark-theme #totalContainer {
+    background-color: black;
+}
+
+.dark-theme .innerTotalContainer {
+    background-color: #748ba5;
+    color: white;
+}
+
+.dark-theme #last-orders-container {
+    background-color: #748ba5;
+    color: white;
+}
+
+.dark-theme #topPlatformContainer {
+    background-color: #748ba5;
+    color: white;
+}
+
+.dark-theme p {
+    color: white;
+}
+
+.dark-theme p #name {
+    color: white;
+}
+ 
+.dark-theme #heading {
+    color: white;
+}
+
+.dark-theme #headingCont #title  {
+    color: white;
+}
+
+.dark-theme #last-orders-container #heading  {
+    color: white;
+}
+
+.dark-theme .bar.gradient {
+    background: linear-gradient(to bottom, rgb(0, 0, 128), rgb(153, 189, 229));
+}
+
+.dark-theme .bar.gradient:hover {
+    background: linear-gradient(to bottom, rgb(2, 2, 77), rgb(174, 194, 216));
+}
+
+.dark-theme  .bar {
+    background: linear-gradient(to bottom, rgb(95, 95, 226), rgb(128, 170, 218));
+}
+
+.dark-theme .the-percent {
+    color: #748ba5;
+}

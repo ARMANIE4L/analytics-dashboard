@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./bootstrap.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./range-slider.css">
+        <link rel="stylesheet" href="./dark theme.css">
+        <script src="./script.js"></script>
+        <title>Analytics Dashboard</title>
+    </head>
+    <body>
+        <header>
+            <div id="sideBar">
+                <img class="icon" src="./images/216207_flash_icon.svg" alt="logo" srcset="" id="logo" class="navLogo">
+                <img class="icon" src="./images/7324074_ui_interface_square_layout_frame_icon.svg" alt="menu" srcset="" id="menu">
+                <img class="icon" src="./images/4213408_address_book_contact_contacts_human_icon.svg" alt="" srcset="" id="addressBook">
+                <img class="icon" src="./images/809482_avatars_men_miscellaneous_people_users_icon.svg" alt="" id="social">
+                <img class="icon" src="./images/9034535_cube_icon.svg" alt="" id="cube">
+                <img class="icon" src="./images/3643771_configuration_configure_gear_set_setting_icon.svg" alt="" id="configure">
+                <img class="icon" src="./images/8324231_ui_essential_app_danger_error_icon.svg" alt="" id="alert">
+
+                <div id="sunAndMoon">
+                    <div id="sunButtonCont">
+                        <img class="icon" src="./images/white sun.svg" alt="" id="sun">
+                    </div>
+                    <div id="moonButtonCont">
+                        <img class="icon" src="./images/gray moon.svg" alt="" id="moon">
+                    </div>
+                </div>
+
+                <br>
+
+                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="forward" class="icon">
+                <img src="./images/settings.svg" alt="" id="settings" class="icon">
+                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="backward" class="icon">
+                
+            </div>
+            <div id="headerContainer">
+                <a class="navbar-brand" href="#">Dashboard
+                </a>
+
+                <img class="navLogo" src="./images/216207_flash_icon.svg" alt="logo" srcset="" id="navLogo" class="logo">
+                <div id="searchContainer">
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                </div>
+
+                <!-- navbar bootstrap code -->
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="togglerIcon">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+              <!-- end of bootstrap code -->
+                
+                <div id="headerDateContainer">
+                    <img src="./images/1814093_calendar_events_schedule_icon.svg" alt="" id="calendar">
+                    <p id="currentDate">November 15, 2023</p>
+                    <img src="./images/4092563_bell_mobile ui_notification_icon.svg" alt="" id="bell">
+                </div>
+
+                <div id="select">
+                    <div id="userDetails">
+                        <img src="./images/avatars/avatar-jacob-thompson.webp" alt="" class="avatar">
+                        <div class="user-name-container">
+                            <p class="user-name">Justin Bergson</p>
+                            <p id="email">justin@gmail.com</p>
+                        </div>
+                        <img src="./images/arrow down.svg" alt="" class="arrow-down">
+                    </div> 
+                </div>
+                <div id="userProfile">
+                    
+                </div>
+            </div>
+
+
+            
+        </header>
+        <div id="outerContainer">
+            <div id="chart-container" class="container1">
+                <div id="barsContainer"></div>
+                <div id="salesTrends">
+                    <p id="heading">Sales Trends</p>
+                    <p id="trend">50,000</p>
+                    <p id="trend">40,000</p>
+                    <p id="trend">50,000</p>
+                    <p id="trend">20,000</p>
+                    <p id="trend">10,000</p>
+                    <p id="trend">50,000</p>
+                    <p id="trend">5,000</p>
+                    <p id="trend">0</p>
+                </div>
+                <div id="monthsContainer">
+                    <p id="month">Jan</p>
+                    <p id="month">Feb</p>
+                    <p id="month">Mar</p>
+                    <p id="month">Apr</p>
+                    <p id="month">May</p>
+                    <p id="month">Jun</p>
+                    <p id="month">Jul</p>
+                    <p id="month">Aug</p>
+                    <p id="month">Sep</p>
+                    <p id="month">Oct</p>
+                    <p id="month">Nov</p>
+                    <p id="month">Dec</p>
+                </div>
+            </div>
+            <div id="totalContainer" class="container2">
+                <div class="innerTotalContainer">
+                    <div id="iconContainer">
+                        <img src="./images/6140919_box_cube_perspective_shape_icon.svg" alt="" class="the-logo">
+                    </div>
+                    <p class="the-title">Total Order</p>
+                    <p class="the-amount">360</p>
+                    <div id="percentContainer">
+                        <p class="the-percent">23.5%</p>
+                    <p class="previous-month">vs. previous month</p>
+                    </div>
+                </div>
+                <div class="innerTotalContainer">
+                    <div id="iconContainer">
+                        <img src="./images/5044143_antenna_satelit_satellite_signal_space_icon.svg" alt="" class="the-logo">
+                    </div>
+                    <p class="the-title">Total Order</p>
+                    <p class="the-amount">360</p>
+                    <div id="percentContainer">
+                        <p class="the-percent">23.5%</p>
+                    <p class="previous-month">vs. previous month</p>
+                    </div>
+                </div>
+                <div class="innerTotalContainer">
+                    <div id="iconContainer">
+                        <img src="./images/8664960_cart_shopping_icon.svg" alt="" class="the-logo"
+                        >
+                        
+                    </div>
+                    <p class="the-title">Total Order</p>
+                    <p class="the-amount">360</p>
+                    <div id="percentContainer">
+                        <p class="the-percent">23.5%</p>
+                    <p class="previous-month">vs. previous month</p>
+                    </div>
+                </div>
+                <div class="innerTotalContainer">
+                    <div id="iconContainer">
+                        <img src="./images/6843092_currency_finance_financial_income_management_icon.svg" alt="" class="the-logo">
+                    </div>
+                    <p class="the-title">Total Order</p>
+                    <p class="the-amount">360</p>
+                    <div id="percentContainer">
+                        <p class="the-percent">23.5%</p>
+                    <p class="previous-month">vs. previous month</p>
+                    </div>
+                </div>
+            </div>
+            <div id="last-orders-container" class="container3">
+                <div id="headingContainer">
+                    <p id="heading">Last Orders</p>
+                    <a href="#" target="_blank">See All</a>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Invoice</th>
+                    </tr>
+                    <tr>
+                        <td>Marcus Bergson</td>
+                        <td>Nov 15, 2023</td>
+                        <td>$80,000</td>
+                        <td>Paid</td>
+                        <td>View</td>
+                    </tr>
+                    <tr>
+                        <td>Jaydon Vaccaro</td>
+                        <td>Nov 15, 2023</td>
+                        <td>$150,000</td>
+                        <td>Refund</td>
+                        <td>View</td>
+                    </tr>
+                    <tr>
+                        <td>Corey Schleifer</td>
+                        <td>Nov 14, 2023</td>
+                        <td>$87,000</td>
+                        <td>Paid</td>
+                        <td>View</td>
+                    </tr>
+                    <tr>
+                        <td>Cooper Press</td>
+                        <td>Nov 14, 2023</td>
+                        <td>$100,000</td>
+                        <td>Refund</td>
+                        <td>View</td>
+                    </tr>
+                    <tr>
+                        <td>Philip Lubin</td>
+                        <td>Nov 13, 2023</td>
+                        <td>$78,000</td>
+                        <td>Paid</td>
+                        <td>View</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="topPlatformContainer" class="container4">
+                 <div id="headingCont">
+                    <p id="title">Top Platform</p>
+                    <a href="#">See All</a>
+                </div>
+                    <div class="platform">
+                        <p class="companyName">Book Bazaar</p>
+                        <div class="rangeContainer">
+                            <input type="range" name="range" class="range" readonly disabled aria-readonly="">
+                            <div class="rangeFill"></div>
+                        </div>
+                        <div class="amountAndPercentGained">
+                            <p>$2,500,000</p>
+                            <p class="percent"></p>
+                        </div>
+                    </div>
+                    <div class="platform">
+                        <p class="companyName">Artisaan Aisle</p>
+                        <div class="rangeContainer">
+                            <input type="range" name="range" class="range" readonly disabled aria-readonly="">
+                            <div class="rangeFill"></div>
+                        </div>
+                        <div class="amountAndPercentGained">
+                            <p>$2,500,000</p>
+                            <p class="percent"></p>
+                        </div>
+                    </div>
+                    <div class="platform">
+                        <p class="companyName">Toy Troop</p>
+                        <div class="rangeContainer">
+                            <input type="range" name="range" class="range" readonly disabled aria-readonly="">
+                            <div class="rangeFill"></div>
+                        </div>
+                        <div class="amountAndPercentGained">
+                            <p>$1,200,000</p>
+                            <p class="percent"></p>
+                        </div>
+                    </div>
+                    <div class="platform">
+                        <p class="companyName">XStore</p>
+                        <div class="rangeContainer">
+                            <input type="range" name="range" class="range" readonly disabled aria-readonly="">
+                            <div class="rangeFill"></div>
+                        </div>
+                        <div class="amountAndPercentGained">
+                            <p>$900,000</p>
+                            <p class="percent"></p>
+                        </div>
+                    </div>
+                    <div class="platform">
+                        <p class="companyName">Konga</p>
+                        <div class="rangeContainer">
+                            <input type="range" name="range" class="range" readonly disabled aria-readonly="">
+                            <div class="rangeFill"></div>
+                        </div>
+                        <div class="amountAndPercentGained">
+                            <p>$200,000</p>
+                            <p class="percent"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
