@@ -9,9 +9,9 @@ body {
     display: inline-flex;
     flex-direction: column;
     justify-content: start;
-    gap: 20px;
+    gap: 10px;
     background-color: rgb(243, 243, 243);
-    padding: 20px ;
+    padding: 1px ;
     position: fixed;
     left: 0;
     border: 1px solid rgb(235, 228, 228);
@@ -24,9 +24,10 @@ body {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
-    padding: 10px 7px;
+    align-items: center;
+    padding: 10px 3px;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 #sun {
@@ -52,25 +53,13 @@ body {
 
 #logo {
     border: solid 1px rgb(7, 216, 188);
-    background-color: rgb(7, 216, 188);
     border-radius: 70px;
-    height: 40px;
-    width: 40px;
-    margin-left: 4px;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 14px;
 }
 
-#forward, #backward {
-    border: 1px solid rgb(175, 175, 175);
-    border-left-color: transparent;
-    border-radius: 20px;
-    width: 25px;
-    height: 25px;
-    margin-left: 9px;
-}
-
-#backward {
-    transform: rotate(180deg);
-}
 
 #headerContainer {
     justify-content: space-between;
@@ -90,7 +79,7 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='2' rx='1' fill='none'/%3E%3Crect y='6' width='24' height='2' rx='1' fill='none'/%3E%3Crect y='12' width='24' height='2' rx='1' fill='none'/%3E%3Crect y='18' width='24' height='2' rx='1' fill='none'/%3E%3C/svg%3E");
     cursor: pointer;
 }
 
@@ -201,10 +190,7 @@ body {
     margin-left: 3px;
 }
 
-option {
-    border-radius: 20px !important;
-    padding: 10px !important;
-}
+
 
 #outerContainer {
     height: 90dvh;
@@ -226,10 +212,68 @@ option {
     padding: 20px;
 }
 
+#sortBy {
+    position: relative;
+    top: 10px;
+    display: flex;
+    gap: 25px;
+    margin: 0px 10px;
+    color: gray;
+}
+
+#barTimeSelect {
+    border-radius: 40px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 0.2px solid gray;
+    position: relative;
+    top: -10px;
+}
+
+#barTime {
+    display: flex;
+    align-items: center;
+}
+
+#barTime .time {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+#barTime .arrow-down {
+    width: 25px;
+    margin-left: 8px;
+}
+
+#bartTimeDisplayContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    padding: 10px 20px;
+    background-color: #F8F8FF;
+    border-radius: 15px;
+    transition: all 0.7s;
+}
+
+#bartTimeDisplayContainer p {
+    background-color: white;
+    padding: 2px 15px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#bartTimeDisplayContainer p:hover {
+    background-color: rgb(7, 216, 188);
+    color: white;
+}
 
 #chart-container #salesTrends {
     position: relative;
-    /* left: 80px; */
     bottom: 250px;
     color: gray;
     font-weight: bold;
@@ -240,7 +284,11 @@ option {
     font-weight: bolder;
     font-size: 1.1em;
     color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: space-between;
 }
+
+
 /* Add CSS styles for the bars */
 
 #barsContainer {
@@ -631,14 +679,37 @@ td {
         background-color: white;
         overflow: scroll;
     }
+
+    #chart-container #headingCont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #chart-container::-webkit-scrollbar {
+        width: 7px;
+        transition: all 0.9s;
+    }
+    #chart-container::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    #chart-container::-webkit-scrollbar-thumb{
+        background-color: rgb(7, 216, 188);
+        border-radius: 10px;
+    }
+
+    #chart-container::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(12, 141, 124);
+    }
     
         /* Add CSS styles for the bars */
         
     #barsContainer {
         position: relative;
-        top: 30px;
+        top: 120px;
         left: 50px;
         height: 100%;
+        width: 100vh;
     }
     
     .bar {
@@ -649,10 +720,27 @@ td {
       transition: all 0.3s;
       min-width: 34px;
     }
+
     
     #salesTrends {
         position: relative;
-        
+        top: -220px;
+    }
+
+    #trends{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #heading {
+        font-weight: bolder;
+        font-size: 1.1em;
+        color: rgb(54, 54, 54);
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        /* top: 20px; */
+
     }
     
     #monthsContainer {
@@ -663,7 +751,7 @@ td {
         gap: 20px;
         flex-grow: 4;
         left: 55px;
-        top: -260px;
+        top: -240px;
         color: gray;
     }
 

@@ -13,13 +13,13 @@
     <body>
         <header>
             <div id="sideBar">
-                <img class="icon" src="./images/216207_flash_icon.svg" alt="logo" srcset="" id="logo" class="navLogo">
-                <img class="icon" src="./images/7324074_ui_interface_square_layout_frame_icon.svg" alt="menu" srcset="" id="menu">
-                <img class="icon" src="./images/4213408_address_book_contact_contacts_human_icon.svg" alt="" srcset="" id="addressBook">
-                <img class="icon" src="./images/809482_avatars_men_miscellaneous_people_users_icon.svg" alt="" id="social">
-                <img class="icon" src="./images/9034535_cube_icon.svg" alt="" id="cube">
-                <img class="icon" src="./images/3643771_configuration_configure_gear_set_setting_icon.svg" alt="" id="configure">
-                <img class="icon" src="./images/8324231_ui_essential_app_danger_error_icon.svg" alt="" id="alert">
+                <img class="" src="./images/216207_flash_icon.svg" alt="logo" srcset="" id="logo" class="">
+                <img class="" src="./images/7324074_ui_interface_square_layout_frame_icon.svg" alt="menu" srcset="" id="menu">
+                <img class="" src="./images/4213408_address_book_contact_contacts_human_icon.svg" alt="" srcset="" id="addressBook">
+                <img class="" src="./images/809482_avatars_men_miscellaneous_people_users_icon.svg" alt="" id="social">
+                <img class="" src="./images/9034535_cube_icon.svg" alt="" id="cube">
+                <img class="" src="./images/3643771_configuration_configure_gear_set_setting_icon.svg" alt="" id="configure">
+                <img class="" src="./images/8324231_ui_essential_app_danger_error_icon.svg" alt="" id="alert">
 
                 <div id="sunAndMoon">
                     <div id="sunButtonCont">
@@ -32,9 +32,9 @@
 
                 <br>
 
-                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="forward" class="icon">
-                <img src="./images/settings.svg" alt="" id="settings" class="icon">
-                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="backward" class="icon">
+                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="forward" class="">
+                <img src="./images/settings.svg" alt="" id="y" class="">
+                <img src="./images/4213481_arrow_direction_forward_next_right_icon.svg" alt="" id="" class="">
                 
             </div>
             <div id="headerContainer">
@@ -83,16 +83,33 @@
         <div id="outerContainer">
             <div id="chart-container" class="container1">
                 <div id="barsContainer"></div>
+                
                 <div id="salesTrends">
-                    <p id="heading">Sales Trends</p>
-                    <p id="trend">50,000</p>
-                    <p id="trend">40,000</p>
-                    <p id="trend">50,000</p>
-                    <p id="trend">20,000</p>
-                    <p id="trend">10,000</p>
-                    <p id="trend">50,000</p>
-                    <p id="trend">5,000</p>
-                    <p id="trend">0</p>
+                    <div id="heading">
+                        <p>Sales Trends</p>
+                        <div id="sortBy">
+                            <p id="sortByText">Sort By</p>
+                            <div id="barTimeSelect">
+                                <div id="barTime">
+                                    <p class="time">Weekly</p>
+                                    <img src="./images/arrow down.svg" alt="" class="arrow-down">
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bartTimeDisplayContainer">
+                    </div>
+                    <div id="trends">
+                        <p id="trend">50,000</p>
+                        <p id="trend">40,000</p>
+                        <p id="trend">50,000</p>
+                        <p id="trend">20,000</p>
+                        <p id="trend">10,000</p>
+                        <p id="trend">50,000</p>
+                        <p id="trend">5,000</p>
+                        <p id="trend">0</p>
+                    </div>
+                    
                 </div>
                 <div id="monthsContainer">
                     <p id="month">Jan</p>
@@ -112,7 +129,7 @@
             <div id="totalContainer" class="container2">
                 <div class="innerTotalContainer">
                     <div id="iconContainer">
-                        <img src="./images/6140919_box_cube_perspective_shape_icon.svg" alt="" class="the-logo">
+                        <img src="./images/box 1.svg" alt="">
                     </div>
                     <p class="the-title">Total Order</p>
                     <p class="the-amount">360</p>
@@ -123,7 +140,8 @@
                 </div>
                 <div class="innerTotalContainer">
                     <div id="iconContainer">
-                        <img src="./images/5044143_antenna_satelit_satellite_signal_space_icon.svg" alt="" class="the-logo">
+                        <img src="./images/box 2.svg" alt="">
+
                     </div>
                     <p class="the-title">Total Order</p>
                     <p class="the-amount">360</p>
@@ -134,7 +152,7 @@
                 </div>
                 <div class="innerTotalContainer">
                     <div id="iconContainer">
-                        <img src="./images/8664960_cart_shopping_icon.svg" alt="" class="the-logo"
+                        <img src="./images/box 3.svg"
                         >
                         
                     </div>
@@ -147,7 +165,7 @@
                 </div>
                 <div class="innerTotalContainer">
                     <div id="iconContainer">
-                        <img src="./images/6843092_currency_finance_financial_income_management_icon.svg" alt="" class="the-logo">
+                        <img src="./images/box 4.svg" alt="">
                     </div>
                     <p class="the-title">Total Order</p>
                     <p class="the-amount">360</p>
@@ -174,37 +192,62 @@
                     <tr>
                         <td>Marcus Bergson</td>
                         <td>Nov 15, 2023</td>
-                        <td>$80,000</td>
+                        <td>
+                            <strong>$80,000</strong>
+                        </td>
                         <td>Paid</td>
-                        <td>View</td>
+                        <td>
+                            <img src="./images/view.svg" alt="">
+                            <strong >View</strong>
+                        </td>
                     </tr>
                     <tr>
                         <td>Jaydon Vaccaro</td>
                         <td>Nov 15, 2023</td>
-                        <td>$150,000</td>
+                        <td>
+                            <strong>$150,000</strong>
+                        </td>
                         <td>Refund</td>
-                        <td>View</td>
+                        <td>
+                            <img src="./images/view.svg" alt="">
+                            <strong >View</strong>
+                        </td>
                     </tr>
                     <tr>
                         <td>Corey Schleifer</td>
                         <td>Nov 14, 2023</td>
-                        <td>$87,000</td>
+                        <td>
+                            <strong>$87,000</strong>
+                        </td>
                         <td>Paid</td>
-                        <td>View</td>
+                        <td>
+                            <img src="./images/view.svg" alt="">
+                            <strong >View</strong>
+                        </td>
                     </tr>
                     <tr>
                         <td>Cooper Press</td>
                         <td>Nov 14, 2023</td>
-                        <td>$100,000</td>
+                        <td>
+                            <strong>$100,000</strong>
+                        </td>
                         <td>Refund</td>
-                        <td>View</td>
+                        <td>
+                            <img src="./images/view.svg" alt="">
+                            <strong >View</strong>
+                        </td>
                     </tr>
                     <tr>
                         <td>Philip Lubin</td>
                         <td>Nov 13, 2023</td>
-                        <td>$78,000</td>
+                        <td>
+                            <strong>$78,000</strong>
+                        </td>
                         <td>Paid</td>
-                        <td>View</td>
+                        <td>
+                            <img src="./images/view.svg" alt="">
+                            <strong >View</strong>
+                        </td>
                     </tr>
                 </table>
             </div>
