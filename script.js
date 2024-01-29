@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   generateBarChart(data);
 
+  //the fourth container with many sliders
   let percentValues = [15, 10, 8, 4, 2];
 
   let rangeInputs = document.querySelectorAll('.platform .range');
@@ -57,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let moonButton = document.querySelector('#moon');
   let body = document.querySelector('body');
   let header = document.querySelector('header');
-
   
   let isSunActive = false;
   let isMoonActive = false;
@@ -67,15 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.toggle("dark-theme");
   
     if (body.classList.contains("dark-theme")) {
-      sunButtonCont.innerHTML = '<img src="./images/gray sun.svg" class="toggle-button">';
-      moonButtonCont.innerHTML = '<img src="./images/white moon.svg" class="moon-toggle-button">';
-      
+      sunButton.src = "./images/gray sun.svg";
+      moonButton.src = "./images/white moon.svg";
+      // moonButton.className = "moon-toggle-button"
+  
       isSunActive = false;
       isMoonActive = true;
       header.classList.remove("dark-theme");
     } else {
-      sunButtonCont.innerHTML = '<img src="./images/white sun.svg" class="sun-toggle-button">';
-      moonButtonCont.innerHTML = '<img src="./images/gray moon.svg" class="gray-moon-toggle-button">';
+      sunButton.src = "./images/white sun.svg";
+      // sunButton.className = "sun-toggle-button"
+      moonButton.src = "./images/gray moon.svg";
       isSunActive = true;
       isMoonActive = false;
     }
@@ -119,11 +121,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let bartTimeDisplayContainer = document.querySelector('#bartTimeDisplayContainer')
   
     bartTimeDisplayContainer.style.display = 'none'
-    bartTimeDisplayContainer.innerHTML = '<p>Daily</p><p>Weekly</p><p>Monthly</p>'
+    bartTimeDisplayContainer.innerHTML = '<p id="daily">Daily</p><p id="weekly">Weekly</p><p id="monthly">Monthly</p>'
   
     barTimeSelect.addEventListener('click', function () {
       bartTimeDisplayContainer.style.display = (bartTimeDisplayContainer.style.display === 'none') ? 'flex' : 'none';
   
+    })
+
+    //TARGET EACH OF THE BAR TO CHANGE AT DIFFERENT BAR TIMES
+    bartTimeDisplayContainer.addEventListener('click', function (event) {
+      if (event.target.id === 'daily') {
+        console.log('jdcvgdhyugddd');
+        data = [10, 14, 30, 100, 110, 250, 110, 150, 230, 50, 210, 200];
+      }
     })
 
     // REMOVE THE CONTAINER WHEN LOST FOCUS
@@ -142,5 +152,21 @@ document.addEventListener("DOMContentLoaded", function () {
     sideBar.style.display = (sideBar.style.display === 'none') ? 'flex' : 'none';
   })
 
+  //STYLE THE STAUS OF PAID TO BE DIFFERENT FROM STATUS OF REFUND
+  const tdElements = document.getElementsByTagName('td');
 
+  for (let i = 0; i < tdElements.length; i++) {
+    const td = tdElements[i];
+    if (td.textContent.trim() === 'Paid') {
+      td.style.color = 'rgb(7, 216, 188)'
+    } else if (td.textContent.trim() === 'Refund') {
+      td.style.color = 'red'
+    }
+  }
+
+  //TARGET THE VIEW ICON
+  let viewIcon = document.getElementsByClassName('view-icon')
+  viewIcon.addEventListener('click', function () {
+    
+  })
 });

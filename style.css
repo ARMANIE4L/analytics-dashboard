@@ -1,8 +1,25 @@
 body {
     background-color: rgb(243, 243, 243);
-    height: 100dvh;
+    height: 100vh;
     color: gray;
     cursor: default;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    transition: all 0.9s;
+}
+body::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: orange
 }
 
 #sideBar {
@@ -252,9 +269,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     position: absolute;
     right: 5px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #F8F8FF;
     border-radius: 15px;
     transition: all 0.7s;
@@ -265,6 +283,7 @@ body {
     padding: 2px 15px;
     align-items: center;
     border-radius: 15px;
+    margin-bottom: 0;
 }
 
 #bartTimeDisplayContainer p:hover {
@@ -289,14 +308,13 @@ body {
 }
 
 
-/* Add CSS styles for the bars */
 
 #barsContainer {
     display: flex;
     align-items: end;
     overflow-x: clip;
     position: relative;
-    left: 90px;
+    left: 60px;
     top: 63px;
 }
 
@@ -325,7 +343,7 @@ body {
     gap: 22px;
     flex-grow: 4;
     position: relative;
-    left: 95px;
+    left: 60px;
     top: -270px;
     color: gray;
     font-weight: bolder;
@@ -403,7 +421,7 @@ body {
 #last-orders-container {
     background-color: white;
     height: 100%;
-    width: 100%;
+    width: 100vh;
     border-radius: 10px;
     padding: 10px 20px;
     /* overflow: scroll; */
@@ -463,7 +481,7 @@ td {
 }
 
 #topPlatformContainer::-webkit-scrollbar {
-    width: 15px;
+    width: 7px;
     transition: all 0.9s;
 }
 #topPlatformContainer::-webkit-scrollbar-track {
@@ -514,6 +532,7 @@ td {
     height: 29px;
     float: left;
     margin: 10px;
+    z-index: 2;
 }
 
 #avatarIcon {
@@ -524,25 +543,30 @@ td {
 #userProfile p {
     position: relative;
     top: 14px;
-    color: gray;
     font-size: 0.8em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 
 #userProfile #signOut:hover {
     padding: 0px;
     display: block;
-    background-color:white;
+    background-color:red;
     border-radius: 0px;
-    color: gray;
+    color: white;
 }
 
 #navLogo {
     display: none;
 }
+
+/* #viewReceiptContainer {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+} */
 
 
 
@@ -567,7 +591,6 @@ td {
         left: 10px;
         top: 10px;
         border: solid 1px rgb(7, 216, 188);
-        background-color: rgb(7, 216, 188);
         border-radius: 70px;
         height: 40px;
         width: 40px;
