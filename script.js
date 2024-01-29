@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   profileContainer.addEventListener('click', function () {
     userProfile.style.display = (userProfile.style.display === 'none') ? 'flex' : 'none';
+
   })
 
   // REMOVE THE CONTAINER WHEN LOST FOCUS
@@ -111,6 +112,27 @@ document.addEventListener("DOMContentLoaded", function () {
       userProfile.style.display = 'none';
     }
   });
+
+
+    //NOW LETS TARGET THE BARTIME COMTAINER
+    let barTimeSelect = document.querySelector('#barTimeSelect')
+    let bartTimeDisplayContainer = document.querySelector('#bartTimeDisplayContainer')
+  
+    bartTimeDisplayContainer.style.display = 'none'
+    bartTimeDisplayContainer.innerHTML = '<p>Daily</p><p>Weekly</p><p>Monthly</p>'
+  
+    barTimeSelect.addEventListener('click', function () {
+      bartTimeDisplayContainer.style.display = (bartTimeDisplayContainer.style.display === 'none') ? 'flex' : 'none';
+  
+    })
+
+    // REMOVE THE CONTAINER WHEN LOST FOCUS
+
+    document.addEventListener('click', function(event) {
+      if (!bartTimeDisplayContainer.contains(event.target) && !barTimeSelect.contains(event.target)) {
+        bartTimeDisplayContainer.style.display = 'none';
+      }
+    });
 
 
   //ACTIVATE THE SIDE BAR
