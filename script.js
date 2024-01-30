@@ -164,9 +164,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //TARGET THE VIEW ICON
-  let viewIcon = document.getElementsByClassName('view-icon')
-  viewIcon.addEventListener('click', function () {
-    
+  //TARGET THE BELL ICON
+  let subscribed = false
+  let bellIcon = document.querySelector('#bell')
+
+  bellIcon.addEventListener('click', function () {
+    subscribed = true
+    bellIcon.style.backgroundColor = 'rgb(7, 216, 188)'
+    bellIcon.style.borderColor = 'rgb(7, 216, 188);'
+    let notificationContainer = document.createElement('notificationContainer')
+    notificationContainer.className = 'notificationContainer'
+    body.appendChild(notificationContainer)
+    notificationContainer.innerHTML = 'Subscribed!'
+    setInterval(() => {
+      notificationContainer.style.display = 'none'
+    }, 3000);
   })
 });

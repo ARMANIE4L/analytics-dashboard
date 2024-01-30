@@ -568,6 +568,19 @@ td {
     background-color: white;
 } */
 
+.notificationContainer {
+    position: absolute;
+    top: 7px;
+    background-color: rgb(7, 216, 188);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    right: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+
 
 
 @media screen and (max-width: 767px) {
@@ -922,16 +935,4 @@ td {
     #topPlatformContainer::-webkit-scrollbar-thumb:hover {
         background-color: rgb(12, 141, 124);
     }
-    #topPlatformContainer #headingCont {
-        display: flex;
-        justify-content: space-between;
-    }
 }
-
-
-
-
-
-
-
-
